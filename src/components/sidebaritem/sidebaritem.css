@@ -1,0 +1,46 @@
+.form__side-item {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+.form__side-item h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form__step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: 0.1px solid #fff;
+    border-radius: 50%;
+}
+.form__step-number.active {
+    background-color: aquamarine;
+    color: #000;
+    border: none;
+}
+.form__step-description {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+.form__step-description p {
+    color: rgb(180, 180, 180);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+.form__step-description h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.current {
+    background-color: aliceblue;
+    color: #000;
+}

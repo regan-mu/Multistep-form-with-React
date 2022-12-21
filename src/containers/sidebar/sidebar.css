@@ -1,0 +1,10 @@
+.form__sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    color: #fff;
+    gap: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
