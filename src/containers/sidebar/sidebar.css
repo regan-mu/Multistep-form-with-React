@@ -4,6 +4,7 @@
     padding: 32px;
     color: #fff;
     gap: 32px;
+    background-image: url("/bg-sidebar-desktop.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,5 +15,6 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        background-image: url("/bg-sidebar-mobile.svg");
     }
 }
