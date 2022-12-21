@@ -1,4 +1,5 @@
 import sidebar from "../../assets/bg-sidebar-desktop.svg";
+import sidebarMobile from "../../assets/bg-sidebar-mobile.svg";
 import "./sidebar.css";
 import {SideBarItem} from "../../components";
 
@@ -22,8 +23,14 @@ const steps = [
 ]
 
 const Sidebar = ({currentPage}) => {
+    const background = {
+        "@media screen and (maxWidth: 600px)": {
+            backgroundImage: `url(${sidebarMobile})`
+        },
+        backgroundImage: `url(${sidebar})`,
+    }
     return (
-        <div className="form__sidebar"  style={{backgroundImage: `url(${sidebar})`}} >
+        <div className="form__sidebar"  style={background} >
             {steps.map((step, index) => {return <SideBarItem key={index} step={step.step} currentPage={currentPage} description={step.description} /> })}
         </div>
     )

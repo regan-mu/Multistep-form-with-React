@@ -2,7 +2,7 @@ import "./mainpage.css";
 import useMultipleStepForm from "../../useMutliStepForm";
 import { subscriptions, addonsData } from "../../data";
 import { PersonalInfo, Plans, Addons, Summary } from "../../components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import thankyou from "../../assets/icon-thank-you.svg";
 
 const INITIAL_DATA = {
@@ -79,14 +79,18 @@ const MainPage = ({changeStep}) => {
             setShowSalutation(!showSalutation);
         }
     }
+    useEffect(() => {
+        // Update the sidebar
+        changeStep(currentStepIndex+1);
+    }, [currentStepIndex])
     
-    // Update the sidebar
-    changeStep(currentStepIndex+1);
 
     return (
         <div className="form__main-page">
             <form onSubmit={handleSubmit}>
-                {step}
+                <div className="form__steps">
+                    {step}
+                </div>
                 <div className="buttons">
                     {!isFirst && <button className="back" type="button" onClick={back}>Back</button>}
                     <button className={!isLast ? "next" : "next confirm"} type="submit" >{!isLast ? "Next Step" : "Confirm"}</button>

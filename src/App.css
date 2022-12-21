@@ -13,3 +13,11 @@ body {
     grid-template-columns: 300px 1fr;
     gap: 64px;
 }
+
+@media screen and (max-width: 720px) {
+    .form__main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px auto;
+        gap: 0;
+    }
+}
